@@ -143,7 +143,21 @@ img {
 }
 .link.active {
     color: var(--accent-txt-cl);
+    position: relative;
 }
+.link.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: var(--blue-bg-cl);
+    border-radius: 2px;
+}
+
+
 
 /* Наші особливості */
 
@@ -284,6 +298,39 @@ img {
     margin-bottom: 0px;
 
 }
+
+.activity-container {
+    position: relative;
+}
+
+.activity-desc {
+
+    position: absolute;
+    bottom: 0%;
+
+    display: flex;
+    justify-content: center;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    text-align: center;
+    align-items: center;
+
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    
+    width: 370px;
+    height: 70px;
+
+    background: rgba(47, 48, 58, 0.8);
+
+    color: var(--light-txt-cl);
+
+}
+
 
 /* Наша команда */
 .team .team-list-item {
@@ -589,6 +636,7 @@ img {
     left: 0;
 
     transform: translateY(101%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     width: 100%;
     height: 100%;
@@ -598,11 +646,7 @@ img {
     justify-content: center;
     
     background-color: var(--blue-bg-rgba);
-
-    transition: transform var(--anim-fast);
 }
-
-
 
 .overlay-description {
     color: var(--light-txt-cl);
@@ -615,7 +659,7 @@ img {
 .ourprojects-iteam:hover .overlay {
     transform: translateY(0); 
 }
-.link-ourprojects {
+.link-ourprojects .overlay-link{
     border: 1px solid #EEEEEE;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
