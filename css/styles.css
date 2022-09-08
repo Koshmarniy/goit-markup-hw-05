@@ -19,6 +19,7 @@
     --blue-bg-rgba: rgba(33, 150, 243, 0.9);
 
     /* Animation */
+    
     --anim-fast: 250ms;
     --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
     /* Others */
@@ -131,8 +132,8 @@ img {
     letter-spacing: 0.02em;
     text-decoration: none;
     transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: var() cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: var(--anim-fast);
+    transition-timing-function: var(--cubic-bezier);
 }
 .icon-envelope,
 .icon-smartphone {
@@ -411,8 +412,8 @@ img {
     background-color: var(--light-txt-cl);
     border-radius: 50%;
     transition-property: background-color, fill;
-    transition-duration: 250ms;
-    transition-timing-function: var() cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: var(--anim-fast);
+    transition-timing-function: var(--cubic-bezier);
 }
 
 
@@ -470,8 +471,8 @@ img {
     border: 1px solid #AFB1B8;
     border-radius: 4px;
     transition-property: border, fill;
-    transition-duration: 250ms;
-    transition-timing-function: var() cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: var(--anim-fast);
+    transition-timing-function: var(--cubic-bezier);
 }
 
 .client-list-item:hover,
@@ -562,8 +563,8 @@ img {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: var() cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: var(--anim-fast);
+    transition-timing-function: var(--cubic-bezier);
 }
 .socials-list-item-footer {
     display: flex;
@@ -610,8 +611,8 @@ img {
     color: var(--main-txt-cl);
 
     transition-property: color, background-color;
-    transition-duration: 250ms;
-    transition-timing-function: var() cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: var(--anim-fast);
+    transition-timing-function: var(--cubic-bezier);
     
     
 }
@@ -679,6 +680,14 @@ img {
     transform: translateY(0); 
 }
 
+.link-ourprojects {
+    display: block;
+    transition: box-shadow 250ms var(--cubic-bezier);
+}
+.link-ourprojects:hover,
+.link-ourprojects:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 
 .box-ourprojects {
     padding: 20px 24px;
